@@ -1,0 +1,38 @@
+.logos-2-wide {
+	// background: $dark-body-bg;
+	text-align: center;
+	display: inline-block;
+	@include transition(background 0.1s ease-out);
+	width: 50%;
+	img {
+		display: inline-block;
+		width: 100%;
+		opacity: 0.5;
+		@include transition(opacity 0.1s ease-out);
+	}
+	&:hover {
+		// background: $dark-body-bg;
+		img {
+			opacity: 1;
+		}
+	}
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 768px) {
+	.logos-2-wide {
+		width: 33%;
+		max-width: 320px;
+	}
+}
+
+@media (min-width: 960px) {
+
+}

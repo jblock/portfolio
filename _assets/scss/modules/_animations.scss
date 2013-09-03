@@ -1,0 +1,33 @@
+@include keyframes(top-alert-reveal) {
+  0% {
+  	opacity: 0;
+    @include transform(translateY(-40px));
+  }
+  100% {
+  	opacity: 1;
+    // background: $onwhite-text;
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(fadeIn) {
+	0% {
+		// opacity: 0;
+		color: transparent;
+	}
+	100% {
+		// opacity: 1;
+		color: white;
+	}
+}
+
+@include keyframes(fadeIn-fromRight) {
+	0% {
+		opacity: 0;
+		// @include transform(translateY(5px));
+	}
+	100% {
+		opacity: 1;
+		// @include transform(translateY(0));
+	}
+}

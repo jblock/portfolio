@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="blog-entry">
+  <p class="return-to"><a class="button-link" href="/blog/">&larr; Return to Blog</a></p>
+  <section class="blog-title">
+      <p class="post-data">
+          <span class="author">by {{page.author}}</span> &bull; <span>{{page.date | date: "%B %d, %Y"}}</span>
+      </p>
+      <h1>{{page.title}}</h1>
+  </section>
+  <section class="blog-content">
+  	{{content}}
+	</section>
+</section>

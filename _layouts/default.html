@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{page.title}} &bull; Jason Block</title>
+        <meta name="description" content="The portfolio and blog of Jason Block, a designer and front-end engineer.">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="//use.typekit.net/obc8vyb.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        {% css_asset_tag main %}
+        - /_assets/scss/main.css.scss
+        {% endcss_asset_tag %}
+    </head>
+    <body class="{{page.title | downcase}}">
+        <section class="main">
+            <header>
+                <section class="inner">
+                    <nav>
+                        <a {% if page.section == "portfolio" %}class="current" {% endif %}href="/portfolio/">Portfolio</a>
+                        <a {% if page.section == "blog" %}class="current" {% endif %}href="/blog/">Blog</a>
+                        <a href="mailto:jason@jasontheblock.com">Email</a>
+                    </nav>
+                    <div class="name-left">
+                        <a href="/">Jason Block</a><span class="tagline"><span class="hd-mobile"> &bull; </span>Designer and Front-End Engineer 
+                        </span>
+                    </div>
+                </section>
+            </header>
+            <section class="content">
+                <section class="inner">
+                    {{content}}
+                </section>
+            </section>
+        </section>
+        <footer>
+            <section class="inner">
+                <p class="bio">Hi, I am <a class="name" href="/">Jason Block</a>, a designer and front-end engineer who loves to build things. I studied mechanical engineering &amp; robotics at <a href="http://rose-hulman.edu/">Rose-Hulman</a> and HCI at <a href="http://hcii.cmu.edu">Carnegie Mellon</a>, all the while working for <a href="http://www.shure.com">Shure</a> and <a href="http://www.picplum.com">Picplum</a>. 
+                <p class="bio">Get in touch! <a href="mailto:jason@jasontheblock.com">Send me an email</a>. I like email. Or download my <a href="/files/jblock_resume.pdf">Resume</a>.</p>
+                <p class="copyr">Designed and Built by <a href="/">Jason Block</a>, &copy;2013 <div class="icons"></a> <a class="icon" title="Twitter" alt="Twitter" href="http://www.twitter.com"><i class="icon-twitter-sign"></i></a> <a class="icon" title="Github" alt="Github" href="http://www.github.com/jblock"><i class="icon-github-sign"></i></a> <a class="icon" title="Linkedin" alt="Linkedin" href="http://www.linkedin.com/in/jasonaaronblock"><i class="icon-linkedin-sign"></i></a> <a class="icon" title="Instagram" alt="Instagram" href="http://instagram.com/_jblock" ><i class="icon-instagram"></i></a> <a class="icon" title="Dribbble" alt="Dribbble" href="http://dribbble.com/jasontheblock" ><i class="icon-dribbble"></i></a></div></p>
+            </section>
+        </footer>
+    <script>
+    var _gaq=[['_setAccount','UA-17462832-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    </body>
+</html>

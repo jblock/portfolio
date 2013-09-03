@@ -1,0 +1,33 @@
+%col {
+	width: 100%;
+	// background: white;
+	display: inline-block;
+	position: relative;
+	// box-shadow: 0 2px 5px $dark-body-bg;
+	// border-right: 0;
+	@media (min-width: 480px) {
+
+	}
+	@media (min-width: 600px) {
+		// margin: 0 6px;
+		max-width: 200px;
+		&:nth-child(3n) {
+			// border: 1px solid $dark-body-bg;
+		}
+	}
+	@media (min-width: 768px) {
+		max-width: 256px;
+	}
+	@media (min-width: 960px) {
+		max-width: 480px;
+	}
+}
+
+%link-behavior {
+	a {
+		color: $dark-body-bg;
+		&:hover {
+			color: lighten($dark-body-bg, 10%);
+		}
+	}
+}

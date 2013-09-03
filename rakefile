@@ -1,0 +1,37 @@
+desc "launch preview"
+task :preview do
+	ENV['JEKYLL_ENV'] = 'development'
+	system "bundle exec jekyll --auto --server"
+end
+
+desc "build"
+task :build do
+	system "bundle exec jekyll"
+end
+
+desc "package"
+task :package do
+	ENV['JEKYLL_ENV'] = 'production'
+  
+  Rake::Task["build"].invoke
+
+  require 'jammit'
+
+  puts "Compressing assets..."
+  system "bundle exec jammit -o _site/css -c _assets.yml -p css/style"
+  puts "done."
+end
+
+desc "deploy"
+task :deploy => :build do
+	puts "Deploying to server"
+	system "rsync -rtz --delete _site/ jasonthe@jasontheblock.com:~/public_html/"
+	puts "Done!"
+end
+
+desc "update projects"
+task :projects do
+	puts "Deploying to Server"
+	system "rsync -rtvz --delete projects/ jasonthe@jasontheblock.com:~/public_html/projects/"
+	puts "Done!"
+end

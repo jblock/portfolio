@@ -1,0 +1,43 @@
+---
+layout: default
+title: Home
+---
+<section class="portfolio-subsection lead-in">
+  <h1>Hi. I'm Jason.</h1>
+  <p>I am a designer and front-end engineer <br />who really likes building things.</p>
+</section>
+<section class="portfolio-subsection mb">
+<h2>Featured &bull; <a class="button-link" href="/portfolio/">All</a> &bull; <a class="button-link" href="/files/jblock_resume.pdf">Resume</a></h2>
+  <section class="list-of-projects">
+  		{% for project in site.categories.portfolio limit:5 %}{% if project.featured == true %}<a href="{{project.url}}" class="ind-project">
+          <div class="bg" style="background-image: url(/assets/images/portfolio/{{project.title | downcase}}/{{project.title | downcase}}_cover.jpg);"></div>
+          <div class="metadata">
+              <span class="time">{{project.date | date: "%Y"}} &bull; {{project.client}}</span>
+              <h3>{{project.title}}</h3>
+              <p class="roles">{{project.tasks | join: ', '}}</p>
+              <p class="read-more">Learn more about this project &rarr;</p>
+          </div>
+      </a>{% endif %}{% endfor %}
+   </section>
+</section>
+<section class="portfolio-subsection mb">
+    <h2>Where I've Worked</h2>
+    <section class="list-of-employers">
+        <a href="http://www.picplum.com/" class="logos-2-wide"><img src="/assets/images/picplum-logo.png" /></a><a href="http://www.shure.com/" class="logos-2-wide"><img src="/assets/images/shure-logo.png" /></a>
+    </section>
+</section>
+<section class="portfolio-subsection mb">
+    <h2>Where I've Studied</h2>
+    <section class="list-of-schools">
+        <a href="http://hcii.cmu.edu/" class="logos-2-wide"><img src="/assets/images/cmu-hcii-logo.png" /></a><a href="http://www.rose-hulman.edu" class="logos-2-wide"><img src="/assets/images/rose-hulman-logo.png" /></a>
+    </section>
+</section>
+<section class="blog-entry-list mb">
+  <h2>Recent Blog Entries &bull; <a class="button-link" href="/blog/">All</a></h2>
+  {% for post in site.categories.blog limit:3 %}<a href="{{post.url}}" class="blog-entry-preview">
+      <p class="date-posted">{{post.date | date: "%B %d, %Y"}}</p>
+      <h3>{{post.title}}</h3>
+      <p class="preview">{{ post.excerpt }}</p>
+      <p class="read-more">Read more &rarr;</p>
+  </a>{% endfor %}
+</section>

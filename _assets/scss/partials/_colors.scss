@@ -1,0 +1,269 @@
+body {
+	// background: $onwhite-text;
+	// background: $dark-body-bg;
+	background: white;
+	color: $grey;
+}
+
+.top-alert {
+	background: transparentize($onwhite-text, 0.5);
+	color: $icicle;
+	a {
+		color: lighten($body-bg, 10%);
+		@include transition(color 0.1s ease-out);
+		&:hover {
+			color: lighten($body-bg, 30%);
+		}
+	}
+}
+
+header {
+	background: $dark-body-bg;
+	// box-shadow: 0 3px 5px black;
+	// background: $onwhite-text;
+}
+
+header a {
+	// color: $eye-blue;
+	@include transition(color 0.1s ease-out);
+	&:hover {
+		color: lighten($body-bg, 10%);
+	}
+}
+
+.button-link {
+	color: $dark-body-bg;
+}
+
+.button-link:hover {
+	color: lighten($dark-body-bg, 10%);
+}
+
+.tagline {
+	color: white;
+}
+
+.home .tagline {
+	color: $dark-body-bg;
+}
+
+.name-left .icon {
+	color: lighten($body-bg, 10%);
+	&:hover {
+		color: white;
+	}
+}
+
+.current {
+	// background: transparentize($eye-blue, .94);
+	background: white;
+	color: $dark-body-bg;
+}
+
+.list-of-projects {
+	// background: url(/assets/images/dot-pattern.png) repeat transparent;
+}
+
+.ind-project {
+	color: $onwhite-text;
+	@include transition(background 0.1s ease-out);
+	// background: lighten($onwhite-text, 10%);
+	background: $dark-body-bg;
+	&:hover {
+		background: $onwhite-text;
+	}
+	.bg {
+		opacity: 0.22;
+	}
+	img {
+		// border: 5px solid lighten($onwhite-text, 10%);
+	}
+	.metadata {
+		color: white;
+		text-shadow: 0 1px 0 $dark-body-bg, 0 0 5px $dark-body-bg;
+		h3 {
+			// color: $icicle;
+		}
+		p, .time {
+			// color: lighten($body-bg, 30%);
+		}
+		.time {
+			border-bottom: 1px solid lighten($dark-body-bg, 20%);
+			// border-bottom: 1px solid $onwhite-text;
+		}
+		.roles, .time {
+			opacity: 0.7;
+		}
+		.read-more {
+			position: absolute;
+			bottom: 0;
+			@include transition(all 0.1s ease-out);
+			opacity: 0;
+		}
+	}
+	&:hover {
+		.bg {
+			opacity: 0.5;
+		}
+		.metadata {
+			text-shadow: 0 1px 0 $onwhite-text, 0 0 5px $onwhite-text;
+			background: $onwhite-text;
+			background: transparentize($onwhite-text, 0.5);
+		}
+		.read-more {
+			opacity: 1;
+			@include transform(translateY(-24px));
+		}
+		h3, p, .time {
+			// color: $icicle;
+			border-color: white;
+		}
+		img {
+			opacity: 0.5;
+			border-color: $dark-body-bg;
+			&:hover {
+				border-color: $icicle;
+			}
+		}
+		.roles, .time {
+			opacity: 1;
+		}
+	}
+}
+
+.blog-entry {
+		// background: white;
+	.return-to {
+		@extend %link-behavior;
+	}
+}
+
+.blog-title {
+	.post-data {
+		color: $grey;
+		border-bottom: 1px solid;
+	}
+	h1 {
+		color: $grey;
+	}
+}
+
+.blog-content {
+	color: $grey;
+	@extend %link-behavior;
+	// border: 1px solid $dark-body-bg;
+	h2, h3 {
+		color: $orange;
+	}
+	a {
+		border-bottom: 1px solid;
+		&.imgLink {
+			img {
+				// box-shadow: 0 2px 5px black;
+			}
+		}
+	}
+}
+
+.blog-entry-preview {
+	@include transition(0.1s background ease-out);
+	color: $grey;
+	// background: $dark-body-bg;
+	.date-posted {
+		// color: transparentize(white, 0.5);
+		border-bottom: 1px solid;
+	}
+	.read-more {
+		@include transition(all 0.1s ease-out);
+	}
+	// &:first-of-type {
+	// 	.date-posted {
+	// 		// color: white;
+	// 		border-color: white;
+	// 	}
+	// }
+	&:hover {
+		background: $onwhite-text;
+		color: white;
+		.date-posted {
+			border-color: white;
+			color: white;
+		}
+	}
+}
+
+.project-details {
+	.return-to {
+		@extend %link-behavior;
+	}
+	.project-information {
+		// background: hsla(0, 0%, 0%, 0.3);
+		.project-dates {
+			border-bottom: 1px solid;
+		}
+		.bullets {
+			@extend %link-behavior;
+		}
+		.subtitle {
+			color: $grey;
+		}
+	}
+	.project-data {
+		@extend %link-behavior;
+		img, .vimeo-upload, .youtube-upload {
+			// box-shadow: 0 2px 5px black;
+		}
+	}
+}
+
+// .picplum {
+// 	.project-information {
+// 		.project-dates {
+// 			border-color: purple;
+// 		}
+// 	}
+// }
+
+footer {
+	@extend %link-behavior;
+	.icon {
+		color: $dark-body-bg;
+		&:hover {
+			color: lighten($dark-body-bg, 10%);
+		}
+	}
+	.inner {
+		border-top: 1px solid $grey;
+	}
+}
+
+header {
+	background: $dark-body-bg url(/assets/images/head.jpg) top no-repeat;
+	background-size: 94px;
+	// .inner {
+	// 	border-bottom: 1px solid white;
+	// }
+}
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 600px) {
+	.ind-project {
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		background-size: 300px;
+	}
+	.top-alert {
+		@include animation-delay(3.4s);
+		@include animation-name(top-alert-reveal);
+		@include animation-timing-function(ease-out);
+		@include animation-duration(1s);
+		@include animation-iteration-count(1);
+		@include animation-fill-mode(forwards);
+	}
+}

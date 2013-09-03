@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<section class="project-details">
+    <p class="return-to"><a class="button-link" href="/portfolio/">&larr; Return to Portfolio</a></p>
+    <section class="project-information">
+        <p class="project-dates">{{page.duration}} &bull; {{page.project-type}}</p>
+        <h1>{{page.title}}</h1>
+        <p>{{page.description}}</p>
+        <p class="tasks">{{page.tasks | join: ', '}}</p>
+        {% if page.team %}
+        <p class="bullets"><span class="subtitle">Team: </span>
+        	{% for person in page.team %}{% assign is_last = forloop.last %}
+      			{% if person[1].size == 2 %}<a href="{{person[1][1]}}">{{person[1][0]}}</a>{% else %}<span>{{person[1][0]}}</span>{% endif %}{% unless is_last %},{% endunless %}
+        	{% endfor %}
+        </p>
+        {% endif %}
+        {% if page.links %}
+        <p class="bullets"><span class="subtitle">Links: </span>
+        	{% for link in page.links %}{% assign is_last = forloop.last %}
+      			{% if link[1].size == 2 %}<a href="{{link[1][1]}}">{{link[1][0]}}</a>{% else %}<span>{{link[1][0]}}</span>{% endif %}{% unless is_last %},{% endunless %}
+        	{% endfor %}
+        </p>
+        {% endif %}
+    </section>
+    <section class="project-data">
+        {{content}}
+    </section>
+</section>

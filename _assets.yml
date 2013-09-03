@@ -1,0 +1,5 @@
+javascript_compressor: closure
+
+css:
+  style:
+    - _site/css/main.css

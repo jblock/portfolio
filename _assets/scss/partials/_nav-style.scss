@@ -1,0 +1,21 @@
+nav a {
+	font-weight: $regular;
+	display: inline-block;
+	padding: $gutter ($gutter);
+	margin-left: $gutter;
+	border-radius: 3px;
+	&:hover {
+		// background: white;
+		color: $onwhite-text;
+	}
+}
+
+nav, nav a {
+	vertical-align: middle;
+}
+
+@media (min-width: 480px) {
+	nav a {
+		padding: $gutter ($gutter * 2);
+	}
+}

@@ -1,0 +1,19 @@
+---
+layout: default
+title: Portfolio
+section: portfolio
+---
+<section class="portfolio-subsection mb">
+<h2>My Work &bull; <a class="button-link" href="http://www.github.com/jblock">Github</a>/<a class="button-link" href="/files/jblock_resume.pdf">Resume</a></h2>
+  <section class="list-of-projects">
+      {% for project in site.categories.portfolio %}<a href="{{ project.url }}" class="ind-project">
+          <div class="bg" style="background-image: url(/assets/images/portfolio/{{project.title | downcase}}/{{project.title | downcase}}_cover.jpg);"></div>
+          <div class="metadata">
+              <span class="time">{{project.date | date: "%Y"}} &bull; {{project.client}}</span>
+              <h3>{{project.title}}</h3>
+              <p class="roles">{{project.tasks | join: ', '}}</p>
+              <p class="read-more">Learn more about this project &rarr;</p>
+          </div>
+      </a>{% endfor %}
+   </section>
+</section>
