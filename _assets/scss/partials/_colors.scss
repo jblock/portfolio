@@ -17,6 +17,16 @@ body {
 	}
 }
 
+hr {
+	height: 0;
+	border: 0;
+	border-top: 1px solid #454545;
+}
+
+.lead-in a {
+	color: $dark-body-bg;
+}
+
 header {
 	background: $dark-body-bg;
 	// box-shadow: 0 3px 5px black;
@@ -256,7 +266,7 @@ header {
 
 @media (min-width: 768px) {
 	header {
-		background-size: 300px;
+		background-size: 150px;
 	}
 	.top-alert {
 		@include animation-delay(3.4s);

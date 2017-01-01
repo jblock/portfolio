@@ -333,6 +333,9 @@ footer {
 		}
 	}
 	.blog-content {
+		hr {
+			margin: 4em 0;
+		}
 		p, blockquote {
 			&:first-child {
 				margin-top: 1em !important;
@@ -395,7 +398,7 @@ footer {
 	}
 	header {
 		.inner {
-			padding: 72px 0;
+			padding: 24px 0;
 		}
 	}
 	.inner {
@@ -422,6 +425,9 @@ footer {
 			padding: 0 0 72px 0;
 			p, h2, blockquote {
 				max-width: 600px;
+			}
+			hr {
+				max-width: 648px;
 			}
 			blockquote {
 				padding: 0;

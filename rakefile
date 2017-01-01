@@ -25,13 +25,13 @@ end
 desc "deploy"
 task :deploy => :build do
 	puts "Deploying to server"
-	system "rsync -rtz --delete _site/ jasonthe@jasontheblock.com:~/public_html/"
+	system "rsync -rtz --delete _site/ root@104.131.187.1:/var/www/jasontheblock.com/public_html/"
 	puts "Done!"
 end
 
 desc "update projects"
 task :projects do
 	puts "Deploying to Server"
-	system "rsync -rtvz --delete projects/ jasonthe@jasontheblock.com:~/public_html/projects/"
+	system "rsync -rtvz --delete projects/ root@104.131.187.1:/var/www/jasontheblock.com/public_html/projects/"
 	puts "Done!"
 end
