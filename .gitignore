@@ -2,7 +2,6 @@ projects/
 *.DS_Store
 _posts/
 _drafts/
-Gemfile.lock
 files/
 _site/
 .sass-cache/
