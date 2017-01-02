@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
+gem 'rake'
 gem 'jekyll'
 gem 'sass'
+gem 'jammit'
 gem 'coffee-script'
 gem 'yui-compressor'
 gem 'jekyll-asset-pipeline'
