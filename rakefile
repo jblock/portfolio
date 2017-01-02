@@ -6,7 +6,7 @@ end
 
 desc "build"
 task :build do
-	system "bundle exec jekyll"
+	system "bundle exec jekyll build"
 end
 
 desc "package"
